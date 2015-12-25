@@ -1,0 +1,22 @@
+public class BankAccount{
+    //Instance Variables
+    private String name,pass;
+    private int pin;
+    private int acctNum;
+    private double bal;
+
+    //constructor
+    public BankAccount(){
+    }
+
+    public BankAccount(String newName, String newPass, int newPin, int newAcctNum, double newBal){
+	name=newName;
+	pass=newPass;
+	pin=newPin;
+	acctNum=newAcctNum;
+	bal=newBal;
+	    }
+    public String ToString(){
+	return "Name: "+name+"\n"+"Pass: "+pass+"\n"+"Pin: "+pin+"\n"+"Acctnum: "+acctNum+"\n"+"Bal: "+bal;
+    }
+}

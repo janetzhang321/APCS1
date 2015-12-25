@@ -1,0 +1,34 @@
+// Underwater Squad
+//Stanley Zeng
+//Roster: Henry Zhang, Janet Zhang, Stanley Zeng
+// APCS1 pd5
+// HW10 -- Mo Money Mo Problems
+// 2015-10-02
+
+
+
+public class Teller {
+    public static void main(String[] args) {
+	BankAccount a= new BankAccount();
+	//this intricately thought-out line of code invokes the constructor, creating a default object of class BankAccount whose properties can be set later
+	a.setBalance(1000.00);
+	//here, we add in a modest sum of money for our new object A by calling the mutator method from BankAccount, allowing us to change the private instance variable and giving it the double value 1000.0
+	a.setAccount(123456789);
+	//we give our new object a well though-out value which provides excellent contrast to the despicable default account value 
+	a.setPin(1234);
+        //a rather secure 4-digit int pin
+	a.setUsername("Stanley");
+	//we assign the string 'Stanley' to the username of the object, named after our magnificient Stanlet Zeng, CS warrior of peace and prosperity
+	a.setPassword("Underwater");
+	//never never  never forget
+	a.auth(123456789, "Underwater");
+	//this calls the method auth, which returns a boolean based on whether or not both the argument  accountNum and pazz are equal to variables account and pazz respectively
+	a.deposit(50.00);
+	//here, we test the method deposit, whose only parameter is the double amount to be deposited, in this case 50.00, which returns true since it is a positive value and fits the if statement 
+	a.withdraw(76.00);
+	//now, we can test teh method withdraw, using double 76.00, and it returns true and prints the changes made, a clever design in their part
+	a.toString();
+	//lastly, we test toString, which has been overwritten to return all the values and credentials of our object
+    }
+}
+	   

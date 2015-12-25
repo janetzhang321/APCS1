@@ -1,0 +1,7 @@
+public class Driver{
+    public static void main(String[] arg){
+	//sets a in class BankAccount
+	BankAccount a = new BankAccount("Janet","Zhang",1234,123456789, .01);
+	System.out.println(a.ToString());
+    }
+}

@@ -1,0 +1,39 @@
+public class Stats{
+    public static int mean(int a, int b){
+	return (a + b)/2;
+    }
+    public static double mean(double a, double b){
+	return (a + b)/2;
+    }
+    public static int max(int a, int b){
+	if (a>b){
+	    return a;}
+	if (b>a){
+	    return b;}
+	else{
+	    return 0;}}
+    public static double max(double a, double b){
+	if (a>b){
+	    return a;}
+	if (b>a){
+	    return b;}
+	else{
+	    return 0;}}
+    public static int geoMean(int a, int b){
+	return (a + b)/2;
+    }
+    public static double geoMean(double a, double b){
+	return (a + b)/2;
+	  }
+    public static void main(String[] args){
+	System.out.println(mean(2,5));
+	System.out.println(mean(20000000,3000));
+	//System.out.println((int)5030.74003);
+	System.out.println(max(4.0000001,4.000001));
+	System.out.println(geoMean(6,6));
+	
+	
+	
+
+    }
+}

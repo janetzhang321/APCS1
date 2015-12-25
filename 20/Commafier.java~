@@ -1,0 +1,44 @@
+public class Commafier {
+    
+    public static String commafyR(int n) {
+	//work from right to left
+	String s="";
+	int temp=0;
+	if (n>=1000){
+	    temp=n%1000; s+=","+temp; n=n-temp;
+	    commafyR(n);
+	}
+	else if (n<1000){ s=n+s; }
+	else {s= "error";}
+        return s;
+    }
+
+
+    //public static String commafyF(int n) {
+	/* your implementation here */
+    //}
+
+
+    public static void main( String[] args ) {
+	//System.out.println(commafyR(1));
+	System.out.println( "commafyR(1): " + commafyR(1) ); 
+	/*============TOP===========
+	  System.out.println( "commafyR(10): " + commafyR(10) ); 
+	  System.out.println( "commafyR(101): " + commafyR(101) ); 
+	  System.out.println( "commafyR(1000): " + commafyR(1000) ); 
+	  System.out.println( "commafyR(12345): " + commafyR(12345) ); 
+	  System.out.println( "commafyR(1234567890): " + commafyR(1234567890) ); 
+	  ============BOT===========*/
+ 
+
+	//System.out.println( "commafyF(1): " + commafyF(1) ); 
+	/*============TOP===========
+	  System.out.println( "commafyF(10): " + commafyF(10) ); 
+	  System.out.println( "commafyF(101): " + commafyF(101) ); 
+	  System.out.println( "commafyF(1000): " + commafyF(1000) ); 
+	  System.out.println( "commafyF(12345): " + commafyF(12345) ); 
+	  System.out.println( "commafyF(1234567890): " + commafyF(1234567890) );
+	  ============BOT===========*/
+    }
+
+}//end class 

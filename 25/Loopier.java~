@@ -1,0 +1,71 @@
+/*
+  Janet Zhang
+  APCS1 pd5
+  HW25 -- Recurse, Recurse, on Elements Not the First! 
+  2015-11-05
+*/
+
+public class Loopier{
+
+    //helper fxns
+    public static boolean findT(int[] a, int target){//if target exists in array
+	int i=0;
+	for(;i<a.length;i++){
+	    if (a[i]==target){return true;}}
+	return false;
+    }
+    
+    public static int[] rHelper(int[] array,int lower,int UPPER){//returns spliced array
+	int i=lower; int[] a= new int[array.length-1];//decrs the length of new array
+	for (;i<=UPPER-2;i++){
+	    a[i]=array[i+1];//create it starting from a[1]
+	}
+	return a;
+    }
+
+    //everything else
+    public static int linSearch(int[] a, int target){
+	int i=0;
+	for(;i<a.length;i++){
+	    if ( target==a[i] ){return i;}//if matches, return index
+	}
+	return -1;//if doesn't, return -1
+    }
+    
+    
+    public static int linSearchR(int[] a, int target){
+	int c=0;
+	if(!findT(a,target)){return -1;}//index doesn't exist
+	else if(a[c]==target){return c;}//if equal, return c
+	else{
+	    c++;//add 1 to c
+	    return c+linSearchR(rHelper(a,0,a.length), target);//add c's together
+	}
+    }
+
+
+    public static int freq( int[] a, int target ){
+        int c=0;
+	for (int i=0;i<a.length;i++){
+	    if (a[i]==target) {c++;}//add 1 to c everytime target and a[position] matches
+	}
+	return c;
+    }
+
+    public static int freqRec( int[] a, int target ){
+	int c=0;
+	if ( !findT(a,target) ){return 0;}//make sure target exists
+	if ( a[0]==target ){c++;}//add 1 to c
+	return c+freqRec(rHelper(a,0,a.length), target);//add all the c together
+	
+    }
+    
+    public static void main(String[] args){
+	int[] a= {1,2,3,1,1,6};
+	int target=7;
+	System.out.println(linSearch(a, target));
+	System.out.println(linSearchR(a, target));
+	System.out.println(freq(a, target));
+	System.out.println(freqRec(a, target));
+    }
+}

@@ -1,0 +1,15 @@
+public class Driver{
+public static void main(String[] args){
+	System.out.println(mean(2,5)); //int
+	System.out.println(mean(2.0,5)); //double
+	System.out.println(mean(2.5,2.3)); //double
+	System.out.println((int)5030.74003); //typecasting?
+	System.out.println(max(4,5)); //int
+	System.out.println(max(4.0,4)); //double
+	System.out.println(max(4.0000001,4.000001)); //double
+	System.out.println(geoMean(3,4)); //int
+        System.out.println(geoMean(3,6)); //int
+	System.out.println(geoMean(3.,6.)); //double
+	System.out.println(geoMean(5*Math.sqrt(2),5*Math.sqrt(2)));//double
+    }
+}

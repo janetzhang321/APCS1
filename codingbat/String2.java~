@@ -1,0 +1,17 @@
+public class String2{
+    //Given a string, return a string where for every char in the original, there are two chars. 
+    public static String doubleChar(String str) {
+	String nstr="";
+	for(;
+	    str.length()-1>0;
+	    nstr+=str.substring(str.length()-1)+str.substring(str.length()-1)){
+	    str=str.substring(1);
+	}
+	return nstr;
+    }
+    public static void main(String[] args){
+	System.out.println(doubleChar("The")); //→ "TThhee"
+	System.out.println(doubleChar("AAbb")); //→ "AAAAbbbb"
+	System.out.println(doubleChar("Hi-There")); //→ "HHii--TThheerree"
+    }
+}

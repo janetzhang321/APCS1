@@ -1,0 +1,10 @@
+public class New{
+    //Constructor
+    
+    public BankAccount(){
+	name="Jane Doe";
+	pass="hi";
+	pin="1234";
+	acctNum="123456789";
+	bal="100";
+    }

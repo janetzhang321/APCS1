@@ -1,0 +1,38 @@
+public class New{
+    public static String stringArray(int[] array){
+	String r="";
+	while (array.length>0){
+	    r+=array[0];
+	    //array=;
+		}
+    }
+    public static void popArray(int[] array,int lower,int UPPER){
+	int[] r; 
+	r = new int[UPPER-lower];
+	for (int i=UPPER-lower; i>0; i--){
+	    r[r.length-i]=array[UPPER-i];
+	}
+	
+    }
+
+    public static void main(String[] args){
+	      int[] a; a = new int[3];
+	      a[0]=5;
+	      a[1]=7;
+	      a[2]=8;
+	      popArray(a,1,2);
+	    /*
+	      int[] a; a = new int[3];
+	      a[0]=5;
+	      a[1]=7;
+	      a[2]=8;
+	      System.out.println(a.length);
+	      System.out.println(a[0]);
+	      System.out.println(a[1]);
+	      System.out.println(a[2]);
+	    */
+	    //System.out.println(a);
+
+	    }
+
+}
